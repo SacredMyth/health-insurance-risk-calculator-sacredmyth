@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance Risk Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Health Insurance Risk Calculator</h1>
+
+        <div id="instructions">
+            <p>Please enter the customer's health information to determine their insurance risk.</p>
+        </div>
+
+        <form id="riskForm">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" required><br>
+
+            <label for="heightFeet">Height (Feet):</label>
+            <input type="number" id="heightFeet" name="heightFeet" min="2" required><br>
+
+            <label for="heightInches">Height (Inches):</label>
+            <input type="number" id="heightInches" name="heightInches" min="0" max="11" required><br>
+
+            <label for="weight">Weight (Pounds):</label>
+            <input type="number" id="weight" name="weight" min="1" required><br>
+
+            <label for="bloodPressure">Blood Pressure:</label>
+            <input type="number" id="bloodPressure" name="bloodPressure" min="50" required><br>
+
+            <label for="familyHistory">Family History (check all that apply):</label><br>
+            <div class="checkbox-container">
+                <input type="checkbox" id="diabetes" name="familyHistory" value="diabetes">
+                <label for="diabetes">Diabetes</label><br>
+
+                <input type="checkbox" id="cancer" name="familyHistory" value="cancer">
+                <label for="cancer">Cancer</label><br>
+
+                <input type="checkbox" id="alzheimers" name="familyHistory" value="alzheimers">
+                <label for="alzheimers">Alzheimer’s</label><br>
+            </div>
+
+            <button type="submit">Calculate Risk</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
