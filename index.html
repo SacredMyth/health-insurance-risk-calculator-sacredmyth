@@ -72,6 +72,13 @@
                 if (document.getElementById('diabetes').checked) familyHistory.push('diabetes');
                 if (document.getElementById('cancer').checked) familyHistory.push('cancer');
                 if (document.getElementById('alzheimers').checked) familyHistory.push('alzheimers');
+
+                //Displays error if height is less than 2 feet
+                if (heightFeet < 2) {
+                    document.getElementById('result').innerText = 'Error: Height must be at least 2 feet.';
+                        return; // Stop further execution
+                    }
+
         
                 // Prepare data to send
                 const requestData = {
