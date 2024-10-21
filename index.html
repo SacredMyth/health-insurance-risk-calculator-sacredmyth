@@ -51,13 +51,13 @@
             <div id="result"></div>
         </div>
 
-        <script></script>
         <script>
+            // Blood Pressure Slider
             const slider = document.getElementById('bloodPressure');
             const displayValue = document.getElementById('bloodPressureValue');
             slider.addEventListener('input', function() {displayValue.textContent = `${this.value} mmHg`;});
-        </script>
-        <script>
+
+            // Form Data
             document.getElementById('riskForm').addEventListener('submit', async function(event) {
                 event.preventDefault();
         
